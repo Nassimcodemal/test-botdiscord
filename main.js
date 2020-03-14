@@ -1,14 +1,16 @@
 const { Client } = require("discord.js");
+const { TOKEN, PREFIX } = require("./config");
 const client = new Client({ disableEveryone: true });
 
 client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log("Je suis prêt !");
 });
 
 client.on("message", msg => {
-  if (msg.content === "?ip") msg.channel.send("L'ip du serveur arrive bientot");
-  if (msg.content === "") msg.channel.send("");
-  if (msg.content === "") msg.channel.send("");
+  if (msg.content.startsWith(`${PREFIX}ip`))
+    msg.channel.send("L'ip du serveur arrive bientot");
+  if (msg.content.startsWith(`${PREFIX}serveur`))
+    msg.channel.send("le serveur est en cours de build");
 });
 
-client.login("Njg4MDAzMTY2MzkzOTkxMjYy.Xm0RSA.ai1WsN6pxkwSgu28DHaK681fM-Q");
+client.login(TOKEN);
