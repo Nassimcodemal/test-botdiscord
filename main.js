@@ -7,11 +7,8 @@ client.on("ready", () => {
 
 client.on("message", msg => {
   if (msg.content === "?ip") msg.channel.send("L'ip du serveur arrive bientot");
-  if (msg.content === "everyone")
-    msg.channel.send("@everyone ceci is eu big test", {
-      disableEveryone: false
-    });
-  if (msg.content === "suce") msg.channel.send("ntm sale pute");
+  if (msg.content === "") msg.channel.send("");
+  if (msg.content === "") msg.channel.send("");
 });
 
 client.login("Njg4MDAzMTY2MzkzOTkxMjYy.Xm0RSA.ai1WsN6pxkwSgu28DHaK681fM-Q");
